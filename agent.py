@@ -101,8 +101,8 @@ agent = Agent(
     max_loops=1,
 )
 
-# Test run
-test_input = """
+if __name__ == "__main__":
+    test_input = """
 PROJECT CONTEXT:
 - Name: NovaDEX
 - What it does: Decentralized exchange on Solana with zero fees for the first month
@@ -116,7 +116,7 @@ SITUATION TYPE: fud
 DETAILS: Someone in general chat is saying the team rugged a previous project and NovaDEX is a scam. Other members are starting to panic.
 """
 
-print("Running Orion test...")
-response = agent.run(test_input)
-print("\n--- ORION OUTPUT ---")
-print(response)
+    print("Running Orion test...")
+    response = agent.run(test_input)
+    print("\n--- ORION OUTPUT ---")
+    print(response)

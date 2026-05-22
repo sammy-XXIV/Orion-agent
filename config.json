@@ -1,0 +1,10 @@
+{
+  "project_name": "Your Project Name",
+  "description": "What your project does in 1-2 sentences",
+  "token_info": "Token name, symbol, and key details (e.g. governance, utility, etc.)",
+  "rules": "Your server rules (e.g. No FUD, no spam, English only in main chat)",
+  "faqs": "Common questions and answers (e.g. TGE date, where to buy, how to get support)",
+  "team_contacts": "Team info and contact channels (e.g. DM mods, open a ticket in #support)",
+  "monitored_channels": [],
+  "response_cooldown_seconds": 60
+}
