@@ -52,67 +52,21 @@ Orion needs a Discord Bot account to connect to your server. This is free and ta
 
 ---
 
-### Step 3: Install Orion
+### Step 3: Install and Configure Orion
 
 ```bash
 git clone https://github.com/sammy-xxiv/orion-agent.git
 cd orion-agent
-pip install -r requirements.txt
+python setup.py
 ```
 
----
+The setup wizard will walk you through everything:
+- Installing dependencies automatically
+- Entering your API keys
+- Filling in your project context (name, token, rules, FAQs, etc.)
+- Choosing which channels to monitor
 
-### Step 4: Configure Your Environment
-
-Create a `.env` file in the project root:
-
-```env
-DISCORD_BOT_TOKEN=your_discord_bot_token_here
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
-SWARMS_API_KEY=your_swarms_api_key_here
-```
-
----
-
-### Step 5: Configure Your Project Context
-
-Edit `config.json` with your project's details. This is what Orion uses to generate accurate, on-brand responses.
-
-```json
-{
-  "project_name": "NovaDEX",
-  "description": "Decentralized exchange on Solana with zero fees for the first month",
-  "token_info": "NOVA — governance and fee sharing token",
-  "rules": "No FUD, no spam, respect all members, English only in main chat",
-  "faqs": "TGE is June 1st. Buy NOVA on Raydium. Team is doxxed on website.",
-  "team_contacts": "Contact mods via #support ticket",
-  "monitored_channels": [],
-  "response_cooldown_seconds": 60
-}
-```
-
-**Config options:**
-
-| Field | Description |
-|---|---|
-| `project_name` | Your project's name |
-| `description` | What your project does |
-| `token_info` | Token name, symbol, and key details |
-| `rules` | Your server rules |
-| `faqs` | Common questions and answers |
-| `team_contacts` | How to reach the team or mods |
-| `monitored_channels` | List of channel IDs to monitor. Leave empty `[]` to monitor all channels |
-| `response_cooldown_seconds` | Minimum seconds between Orion responses per channel (default: 60) |
-
-**To get a channel ID:** Right-click any channel in Discord > Copy Channel ID (you need Developer Mode enabled in Discord settings)
-
----
-
-### Step 6: Run Orion
-
-```bash
-python bot.py
-```
+At the end it will ask if you want to start Orion immediately.
 
 You should see: `Orion is online as YourBotName#0000`
 
