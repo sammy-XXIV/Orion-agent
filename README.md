@@ -74,7 +74,7 @@ Orion is now live in your server.
 
 ---
 
-### Step 7: Host Orion 24/7
+### Step 4: Host Orion 24/7
 
 To keep Orion running around the clock, deploy it to a server. Recommended options:
 
